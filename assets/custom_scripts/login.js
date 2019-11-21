@@ -14,9 +14,9 @@ $(document).ready(function() {
 			beforeSend: function() {
 				$('body').mLoading('show'); 
 			},
-			success 	: function(response) {
+			success 	: function(response) {	
 				$("#btn_login").html('Submit');
-				$("#btn_login").prop("disabled", false);
+				$("#btn_login").prop("disabled", false);			
 				if(response.error_validation) {
 					$('body').mLoading('hide');
 					Swal.fire({
@@ -49,7 +49,7 @@ $(document).ready(function() {
         					window.location.href = 'home';
     					}
 			    	});					
-				}
+				}				
 			},
      		error: function(xhr, status, error) {
 				$('body').mLoading('hide');
